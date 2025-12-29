@@ -4,6 +4,7 @@ using Soenneker.Rebrickable.Colors.Abstract;
 using Soenneker.Tests.FixturedUnit;
 using System.IO;
 using System.Threading.Tasks;
+using Soenneker.Facts.Manual;
 using Xunit;
 
 namespace Soenneker.Rebrickable.Colors.Tests;
@@ -21,15 +22,15 @@ public sealed class RebrickableColorsUtilTests : FixturedUnitTest
     [Fact]
     public void Default()
     {
-
     }
 
-    [LocalFact]
+    [ManualFact]
+    //[LocalFact]
     public async ValueTask GetColors()
     {
-        Stream? result = await _util.GetAll( CancellationToken);
+        Stream? result = await _util.GetAll(CancellationToken);
 
-        result.Should().NotBeNull();
+        result.Should()
+              .NotBeNull();
     }
-
 }
