@@ -29,7 +29,7 @@
     </ItemGroup>
 
     <ItemGroup>
-        <ProjectReference Include="..\..\src\Soenneker.Rebrickable.Colors.csproj" />
+        <ProjectReference Include="..\..\src\Soenneker.Rebrickable.Colors\Soenneker.Rebrickable.Colors.csproj" />
     </ItemGroup>
 
     <ItemGroup>
