@@ -4,7 +4,6 @@ using Soenneker.Rebrickable.Colors.Abstract;
 using Soenneker.Tests.HostedUnit;
 using System.IO;
 using System.Threading.Tasks;
-using Soenneker.Facts.Manual;
 
 namespace Soenneker.Rebrickable.Colors.Tests;
 
@@ -23,7 +22,7 @@ public sealed class RebrickableColorsUtilTests : HostedUnitTest
     {
     }
 
-    [ManualFact]
+    [Skip("Manual")]
     //[LocalOnly]
     public async ValueTask GetColors()
     {
