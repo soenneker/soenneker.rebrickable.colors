@@ -1,31 +1,30 @@
-﻿using AwesomeAssertions;
-using Soenneker.Facts.Local;
+using AwesomeAssertions;
+using Soenneker.Tests.Attributes.Local;
 using Soenneker.Rebrickable.Colors.Abstract;
-using Soenneker.Tests.FixturedUnit;
+using Soenneker.Tests.HostedUnit;
 using System.IO;
 using System.Threading.Tasks;
 using Soenneker.Facts.Manual;
-using Xunit;
 
 namespace Soenneker.Rebrickable.Colors.Tests;
 
-[Collection("Collection")]
-public sealed class RebrickableColorsUtilTests : FixturedUnitTest
+[ClassDataSource<Host>(Shared = SharedType.PerTestSession)]
+public sealed class RebrickableColorsUtilTests : HostedUnitTest
 {
     private readonly IRebrickableColorsUtil _util;
 
-    public RebrickableColorsUtilTests(Fixture fixture, ITestOutputHelper output) : base(fixture, output)
+    public RebrickableColorsUtilTests(Host host) : base(host)
     {
         _util = Resolve<IRebrickableColorsUtil>(true);
     }
 
-    [Fact]
+    [Test]
     public void Default()
     {
     }
 
     [ManualFact]
-    //[LocalFact]
+    //[LocalOnly]
     public async ValueTask GetColors()
     {
         Stream? result = await _util.GetAll(CancellationToken);
