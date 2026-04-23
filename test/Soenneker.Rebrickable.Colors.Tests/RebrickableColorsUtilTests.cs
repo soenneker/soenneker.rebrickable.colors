@@ -26,9 +26,10 @@ public sealed class RebrickableColorsUtilTests : HostedUnitTest
     //[LocalOnly]
     public async ValueTask GetColors()
     {
-        Stream? result = await _util.GetAll(CancellationToken);
+        Stream? result = await _util.GetAll(System.Threading.CancellationToken.None);
 
         result.Should()
               .NotBeNull();
     }
 }
+
