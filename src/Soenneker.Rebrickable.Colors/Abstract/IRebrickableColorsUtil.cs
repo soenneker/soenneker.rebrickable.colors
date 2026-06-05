@@ -8,5 +8,10 @@ namespace Soenneker.Rebrickable.Colors.Abstract;
 /// </summary>
 public interface IRebrickableColorsUtil
 {
+    /// <summary>
+    /// Gets all.
+    /// </summary>
+    /// <param name="cancellationToken">The cancellation token.</param>
+    /// <returns>A task containing the result of the operation.</returns>
     ValueTask<System.IO.Stream?> GetAll(CancellationToken cancellationToken = default);
 }
