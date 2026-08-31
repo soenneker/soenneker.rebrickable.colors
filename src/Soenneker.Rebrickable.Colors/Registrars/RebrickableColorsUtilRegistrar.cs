@@ -6,7 +6,7 @@ using Soenneker.Rebrickable.Colors.Abstract;
 namespace Soenneker.Rebrickable.Colors.Registrars;
 
 /// <summary>
-/// A utility library for color related Rebrickable operations
+/// Registers the Rebrickable color-list client.
 /// </summary>
 public static class RebrickableColorsUtilRegistrar
 {
