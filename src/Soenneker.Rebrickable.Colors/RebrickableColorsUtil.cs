@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Soenneker.Rebrickable.Colors;
 
+/// <inheritdoc cref="IRebrickableColorsUtil" />
 public sealed class RebrickableColorsUtil : IRebrickableColorsUtil
 {
     private readonly IRebrickableClientUtil _clientUtil;
