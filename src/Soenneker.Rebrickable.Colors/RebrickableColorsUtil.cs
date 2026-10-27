@@ -8,7 +8,6 @@ using System.Threading.Tasks;
 
 namespace Soenneker.Rebrickable.Colors;
 
-/// <inheritdoc cref="IRebrickableColorsUtil" />
 public sealed class RebrickableColorsUtil : IRebrickableColorsUtil
 {
     private readonly IRebrickableClientUtil _clientUtil;
@@ -22,6 +21,6 @@ public sealed class RebrickableColorsUtil : IRebrickableColorsUtil
     {
         RebrickableOpenApiClient client = await _clientUtil.Get(cancellationToken).NoSync();
 
-        return await client.Api.V3.Lego.Colors.GetAsync(null, cancellationToken).NoSync();
+        return await client.Api.V3.Lego.Colors.EmptyPathSegment.GetAsync(null, cancellationToken).NoSync();
     }
 }
