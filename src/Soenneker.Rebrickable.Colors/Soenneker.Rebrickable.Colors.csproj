@@ -46,6 +46,6 @@
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="Soenneker.Rebrickable.ClientUtil" Version="11.0.624" />
+        <PackageReference Include="Soenneker.Rebrickable.ClientUtil" Version="11.0.626" />
     </ItemGroup>
 </Project>
